@@ -1,31 +1,62 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-12 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Please fill out the following form for your insurance quote </h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Application", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-md-12">
+                    <p>First Name:</p>
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                </div>
+                <div class="form-group col-md-12">
+                    <p>Last Name:</p>
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                </div>
+                <div class="form-group col-md-12">
+                    <p>Email Address:</p>
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
+                </div>
+                <div class="form-group col-md-12">
+                    <label>Date of Birth:</label>
+                    <input name="DateOfBirth" type="date" class="form-control" placeholder="Date of Birth" />
+                </div>
+                <div class="form-group col-md-12">
+                    <p>Car Year:</p>
+                    <input name="CarYear" type="number" class="form-control" placeholder="Car Year" />
+                </div>
+                <div class="form-group col-md-12">
+                    <p>Car Make:</p>
+                    <input name="CarMake" type="text" class="form-control" placeholder="Car Make" />
+                </div>
+                <div class="form-group col-md-12">
+                    <p>Car Model:</p>
+                    <input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
+                </div>
+                
+                <div class="form-group col-md-12">
+                    <p>Have you ever had a DUI?</p>
+                    <label for="DUI"><input type="radio" name="DUI" class="form-control radio" value="true">Yes</label>
+                    <label for="DUI"><input type="radio" name="DUI"class="form-control radio" value="false"checked>No</label>
+                </div>
+                
+                <div class="form-group col-md-12">
+                    <p>Number of speeding tickets?</p>
+                    <input name="SpeedingTickets" type="number" class="form-control" placeholder="Number of speeding tickets?" />
+                </div>               
+                
+                <div class="form-group col-md-12">
+                    <p>What type of coverage would you like?</p>
+                    <label for="TypeOfCoverage">Type of Coverage <input type="radio" name="TypeOfCoverage" class="form-control radio" value="true"checked>Full Coverage</label>
+                    <label for="TypeOfCoverage"><input type="radio" name="TypeOfCoverage" class="form-control radio"value="false">Liability</label>
+                </div>
+                
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            </div>
+            }
+        </div>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>

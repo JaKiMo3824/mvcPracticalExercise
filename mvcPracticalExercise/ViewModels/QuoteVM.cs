@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace mvcPracticalExercise.ViewModels
+{
+    public class QuoteVM
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string EmailAddress { get; set; }
+        public double QuoteAmount { get; set; }
+    }
+}
